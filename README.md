@@ -138,12 +138,14 @@ For further information, visit [the documentation](http://attardi.github.io/wiki
 ## Example of Use
 The following commands illustrate how to apply the script to a Wikipedia dump:
 
-> wget http://download.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
-> WikiExtractor.py -cb 250K -o extracted enwiki-latest-pages-articles.xml.bz2
+$ wget http://download.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
+
+$ WikiExtractor.py -cb 250K -o extracted enwiki-latest-pages-articles.xml.bz2
 
 In order to combine the whole extracted text into a single file one can issue:
 
-> find extracted -name '*bz2' -exec bzip2 -dcv {} \; > wikitext.xml
-> rm -rf extracted
+$ find extracted -name '*bz2' -exec bzip2 -dcv {} \; > wikitext.xml
+
+$ rm -rf extracted
 
 
